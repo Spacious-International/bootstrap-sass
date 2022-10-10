@@ -9,6 +9,8 @@
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
+@use "sass:math";
+
 @mixin clearfix {
   *zoom: 1;
   &:before,
@@ -379,7 +381,7 @@
 
 // Opacity
 @mixin opacity($opacity) {
-  opacity: $opacity / 100;
+  opacity: $opacity * 0.01;
   filter: alpha(opacity=$opacity);
 }
 
@@ -494,7 +496,7 @@
   // to negative-margin away, but so it goes.
   *width: 100%;
   height: 1px;
-  margin: (($baseLineHeight / 2) - 1) 1px; // 8px 1px
+  margin: (($baseLineHeight * 0.5) - 1) 1px; // 8px 1px
   *margin: -5px 0 5px;
   overflow: hidden;
   background-color: $top;
@@ -528,7 +530,7 @@
 // Vertically center elements in the navbar.
 // Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
 @mixin navbarVerticalAlign($elementHeight) {
-  margin-top: ($navbarHeight - $elementHeight) / 2;
+  margin-top: ($navbarHeight - $elementHeight) * 0.5;
 }
 
 
@@ -618,7 +620,7 @@
       @include input-block-level();
       float: left;
       margin-left: $fluidGridGutterWidth;
-      *margin-left: $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+      *margin-left: $fluidGridGutterWidth - (math.div(.5, $gridRowWidth) * 100px * 1%);
     }
     [class*="span"]:first-child {
       margin-left: 0;
@@ -650,17 +652,17 @@
 
 @mixin grid-fluid-span($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
   width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1));
-  *width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%);
+  *width: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (math.div(.5, $gridRowWidth) * 100px * 1%);
 }
 
 @mixin grid-fluid-offset($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
   margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) + ($fluidGridGutterWidth * 2);
-  *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%) + ($fluidGridGutterWidth * 2) - (.5 / $gridRowWidth * 100px * 1%);
+  *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (math.div(.5, $gridRowWidth) * 100px * 1%) + ($fluidGridGutterWidth * 2) - (math.div(.5, $gridRowWidth) * 100px * 1%);
 }
 
 @mixin grid-fluid-offset-first-child($columns, $fluidGridColumnWidth, $fluidGridGutterWidth) {
   margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) + ($fluidGridGutterWidth);
-  *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (.5 / $gridRowWidth * 100px * 1%) + $fluidGridGutterWidth - (.5 / $gridRowWidth * 100px * 1%);
+  *margin-left: ($fluidGridColumnWidth * $columns) + ($fluidGridGutterWidth * ($columns - 1)) - (math.div(.5, $gridRowWidth) * 100px * 1%) + $fluidGridGutterWidth - (math.div(.5, $gridRowWidth) * 100px * 1%);
 }
 
 
