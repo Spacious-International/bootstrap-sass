@@ -2,6 +2,9 @@
 // Hero unit
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 .hero-unit {
   padding: 60px;

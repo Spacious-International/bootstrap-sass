@@ -2,6 +2,9 @@
 // Grid system
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 // Fixed (940px)
 @include grid-core($gridColumnWidth, $gridGutterWidth);

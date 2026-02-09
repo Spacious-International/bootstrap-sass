@@ -2,6 +2,9 @@
 // Accordion
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 // Parent container
 .accordion {

@@ -2,6 +2,9 @@
 // Tooltips
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 // Base class
 .tooltip {

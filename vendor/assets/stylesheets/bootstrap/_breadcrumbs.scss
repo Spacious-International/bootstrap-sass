@@ -2,6 +2,9 @@
 // Breadcrumbs
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 .breadcrumb {
   padding: 8px 15px;

@@ -2,6 +2,9 @@
 // Pager pagination
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 .pager {
   margin: $baseLineHeight 0;

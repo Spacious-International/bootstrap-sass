@@ -2,6 +2,9 @@
 // Labels and badges
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 // Base classes
 .label,

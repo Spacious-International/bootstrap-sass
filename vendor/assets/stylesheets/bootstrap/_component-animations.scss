@@ -2,6 +2,9 @@
 // Component animations
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 
 .fade {
   opacity: 0;

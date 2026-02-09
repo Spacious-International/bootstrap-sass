@@ -2,6 +2,9 @@
 // Modals
 // --------------------------------------------------
 
+@use "./variables" as *;
+@use "./mixins" as *;
+
 // Background
 .modal-backdrop {
   position: fixed;
