@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 @use "./variables" as *;
+@forward "./variables";
 @use "./mixins" as *;
 
 @media (min-width: 1200px) {

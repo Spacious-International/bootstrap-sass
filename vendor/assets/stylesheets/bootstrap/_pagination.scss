@@ -3,6 +3,7 @@
 // --------------------------------------------------
 
 @use "./variables" as *;
+@forward "./variables";
 @use "./mixins" as *;
 
 // Space out pagination from surrounding content
