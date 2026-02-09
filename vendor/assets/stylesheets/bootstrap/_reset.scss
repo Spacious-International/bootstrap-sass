@@ -3,8 +3,8 @@
 // Adapted from http://github.com/necolas/normalize.css
 // --------------------------------------------------
 
-@use "./variables" as *;
 @forward "./variables";
+@use "./variables" as *;
 @use "./mixins" as *;
 
 

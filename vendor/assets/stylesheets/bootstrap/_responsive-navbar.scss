@@ -2,8 +2,8 @@
 // Responsive: Navbar
 // --------------------------------------------------
 
-@use "./variables" as *;
 @forward "./variables";
+@use "./variables" as *;
 @use "./mixins" as *;
 
 // TABLETS AND BELOW

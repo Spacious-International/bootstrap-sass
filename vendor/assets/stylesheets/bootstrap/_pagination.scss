@@ -2,8 +2,8 @@
 // Pagination (multiple pages)
 // --------------------------------------------------
 
-@use "./variables" as *;
 @forward "./variables";
+@use "./variables" as *;
 @use "./mixins" as *;
 
 // Space out pagination from surrounding content

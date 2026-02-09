@@ -2,8 +2,8 @@
 // Responsive: Large desktop and up
 // --------------------------------------------------
 
-@use "./variables" as *;
 @forward "./variables";
+@use "./variables" as *;
 @use "./mixins" as *;
 
 @media (min-width: 1200px) {
