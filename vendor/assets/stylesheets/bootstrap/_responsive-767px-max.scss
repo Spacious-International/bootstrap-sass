@@ -2,8 +2,6 @@
 // Responsive: Landscape phone to desktop/tablet
 // --------------------------------------------------
 
-@forward "./variables";
-@use "./variables" as *;
 @use "./mixins" as *;
 
 @media (max-width: 767px) {
